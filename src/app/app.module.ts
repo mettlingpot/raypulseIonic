@@ -9,13 +9,23 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { RaypulseService } from '../services/raypulse.service';
+import { HttpModule } from '@angular/http';
+
+import { EvenementPage } from '../pages/evenement/evenement';
+import { InscriptionPage } from '../pages/inscription/inscription';
+
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    EvenementPage,
+    InscriptionPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -23,9 +33,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    EvenementPage,
+    InscriptionPage
   ],
   providers: [
+    RaypulseService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

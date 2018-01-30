@@ -1,0 +1,19 @@
+<ion-header >
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{evenement.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding > 
+    <img src="http://vps448699.ovh.net/uploads/img/{{evenement.image.id}}.{{evenement.image.url}}"/>
+    <H1>{{evenement.title | uppercase }}</H1>
+    <p>du {{evenement.datedebut | date: 'dd/MM/yyyy H:mm' }} au {{evenement.datefin | date: 'dd/MM/yyyy H:mm' }}</p>
+    <p>Auteur: {{evenement.author}}</p>
+    <p>prix: {{evenement.prix}}</p>
+    <p>{{evenement.content}}</p>
+    <!--<p><ion-icon name="call" item-start></ion-icon><a href="tel:{{annonceur.telephone}}"> {{annonceur.telephone}}</a></p>-->
+    <p><a href="http://{{evenement.site}}">{{evenement.site}}</a></p>
+</ion-content>
